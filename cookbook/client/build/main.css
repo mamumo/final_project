@@ -1,0 +1,131 @@
+body{
+  font-family: Verdana;
+  margin: 0;
+}
+
+.container{  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(images/notflix-background.jpg);
+  background-size: cover;
+
+}
+
+.title{
+  text-transform: uppercase;
+  font-family: Impact, Charcoal, sans-serif;
+  color: crimson;
+  font-size: 60px;
+  -webkit-text-stroke: 2px black;
+  text-decoration: none;
+}
+
+.home{
+  width: 50%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.recipes-link, button{
+  margin-top: 15px;
+  padding: 10px 40px;
+  background-color: red;
+  color: #fafafa;
+  border-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.listing{
+  width: 100%;
+  height: 100vh;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 10px;
+  margin: 0 0 20px 0;
+}
+
+.search-box{
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 10vh;
+  font-size: 20px;
+}
+
+.login-form{
+  margin: 0 auto;
+  width: 70%;
+}
+
+.login-form input{
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+button{
+  padding: 10px 50px;
+  margin 20px 0;
+  color: white;
+  background-color: #333;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.recipe-image{
+  width: 90%;
+}
+
+/*.recipe-video{
+  width="560" 
+  height="315"
+  border="0" 
+}*/
+
+.recipes-container{
+  display: flex;
+}
+
+.recipes-container > *{
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.recipe{
+  background: rgba(0, 0, 0, .8);
+  color: #eee;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+}
+
+.recipe-name{
+  margin: 0;
+}
+
+.recipe-servings{
+  font-size: 10px;
+  margin: 0;
+}
+
+.recipe-ingredients{
+  font-size: 12px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.recipe-preperation{
+  font-size: 12px;
+  padding: 0 20px;
+  text-align: center;
+}
