@@ -19825,16 +19825,19 @@
 	    return { searchQuery: '', recipes: [] };
 	  },
 	  componentDidMount: function componentDidMount() {
-	    var url = "http://localhost:5000/api/recipe";
+	    var _this = this;
+	
+	    var url = "http://localhost:5000/api/recipes";
 	    var request = new XMLHttpRequest();
 	    request.open("GET", url);
+	
 	    request.setRequestHeader("Content-Type", "application/json");
 	    request.withCredentials = true;
 	
 	    request.onload = function () {
 	      if (request.status === 200) {
 	        var data = JSON.parse(request.responseText);
-	        this.setState({ recipes: data });
+	        _this.setState({ recipes: data });
 	      } else {
 	        console.log("Whoops... you don't seem to be logged in");
 	        browserHistory.goBack();
@@ -19846,7 +19849,7 @@
 	    this.setState({ searchQuery: event.target.value });
 	  },
 	  render: function render() {
-	    var _this = this;
+	    var _this2 = this;
 	
 	    return React.createElement(
 	      'div',
@@ -19865,7 +19868,7 @@
 	        'div',
 	        { className: 'recipes-container' },
 	        this.state.recipes.filter(function (recipe) {
-	          return (recipe.name + ' ' + recipe.ingredients).toUpperCase().indexOf(_this.state.searchQuery.toUpperCase()) >= 0;
+	          return (recipe.name + ' ' + recipe.ingredients).toUpperCase().indexOf(_this2.state.searchQuery.toUpperCase()) >= 0;
 	        }).map(function (recipe) {
 	          return React.createElement(Recipe, _extends({}, recipe, { key: recipe.name }));
 	        })
@@ -25580,7 +25583,7 @@
 	  fetchUser: function fetchUser() {
 	    console.log("fetching user");
 	    var request = new XMLHttpRequest();
-	    request.open("GET", this.props.url + "users.json");
+	    request.open("GET", "http://localhost:5000/" + "users.json");
 	    request.setRequestHeader("Content-Type", "application/json");
 	    request.withCredentials = true;
 	

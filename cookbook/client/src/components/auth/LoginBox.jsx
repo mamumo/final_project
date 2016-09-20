@@ -16,7 +16,7 @@ const LoginBox = React.createClass({
   fetchUser: function(){
     console.log("fetching user")
     var request = new XMLHttpRequest();
-    request.open("GET", this.props.url + "users.json");
+    request.open("GET", "http://localhost:5000/" + "users.json");
     request.setRequestHeader("Content-Type", "application/json");
     request.withCredentials = true;
 
@@ -39,15 +39,15 @@ const LoginBox = React.createClass({
   },
 
   render () {
-      var mainDiv = <div>
+      let mainDiv = <div>
         <h4> Please Sign In/Up </h4>
-        <SignIn url={this.props.url + "users/sign_in.json"} onSignIn={this.setUser}></SignIn>
-        <SignUp url={this.props.url + "users.json"} onSignUp={this.setUser}></SignUp>
+        <SignIn url={this.props.url + "users/sign_in.json"} onSignIn={this.setUser}/>
+        <SignUp url={this.props.url + "users.json"} onSignUp={this.setUser}/>
       </div>
       if(this.state.currentUser){
         mainDiv = <div>
           <h4> Welcome {this.state.currentUser.email}</h4>
-          <SignOut url={this.props.url + "users/sign_out.json"} onSignOut={this.setUser}></SignOut>
+          <SignOut url={this.props.url + "users/sign_out.json"} onSignOut={this.setUser}/>
         </div>
       }
       return (

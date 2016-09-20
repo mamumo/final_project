@@ -10,13 +10,14 @@ const Listing = React.createClass({
   },
 
   componentDidMount () {
-    var url = "http://localhost:5000/api/recipe";
+    var url = "http://localhost:5000/api/recipes";
     var request = new XMLHttpRequest();
     request.open("GET", url);
+
     request.setRequestHeader("Content-Type", "application/json");
     request.withCredentials = true;
 
-    request.onload = function(){
+    request.onload = () => {
       if(request.status === 200) {
         var data = JSON.parse(request.responseText);
         this.setState({ recipes:data});

@@ -1,24 +1,36 @@
 body{
-  font-family: Verdana;
+  font-family: Courier;
   margin: 0;
 }
 
-.container{  
+header{
+  text-align:none;
+  background-color: black;
+  top:0px;
+  height: 40px;
+  position:fixed;
+ /* left:0px;*/
+  /*right:5px;*/
+  /*bottom:0px;*/
+  width: 100%;
+  color:white;
+
+}
+
+/*.container{  
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url(images/notflix-background.jpg);
+  background-image: url(images/bull.jpg);
   background-size: cover;
 
-}
+}*/
 
 .title{
-  text-transform: uppercase;
-  font-family: Impact, Charcoal, sans-serif;
-  color: crimson;
+  font-family: Courier
   font-size: 60px;
   -webkit-text-stroke: 2px black;
   text-decoration: none;
@@ -33,7 +45,7 @@ body{
 .recipes-link, button{
   margin-top: 15px;
   padding: 10px 40px;
-  background-color: red;
+  background-color: black;
   color: #fafafa;
   border-color: transparent;
   display: inline-block;
@@ -68,18 +80,18 @@ nav{
 
 .login-form input{
   display: block;
-  margin: 20px 0;
+  /*margin: 20px 0;
   padding: 10px;
-  width: 100%;
+  width: 100%;*/
 }
 
 button{
-  padding: 10px 50px;
-  margin 20px 0;
+  /*padding: 10px 50px;*/
+ /* margin 20px 0;*/
   color: white;
-  background-color: #333;
-  font-size: 15px;
-  border-radius: 5px;
+  background-color: black;
+  /*font-size: 15px;
+  border-radius: 5px;*/
 }
 
 .recipe-image{
@@ -128,4 +140,16 @@ button{
   font-size: 12px;
   padding: 0 20px;
   text-align: center;
+}
+
+footer{
+  text-align:none;
+  background-color: black;
+  height: 40px;
+  position:fixed;
+  left:0px;
+  right:5px;
+  bottom:0px;
+  width: 100%;
+  color:white;
 }
