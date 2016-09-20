@@ -40,9 +40,17 @@ const LoginBox = React.createClass({
 
   render () {
       let mainDiv = <div>
-        <h4> Please Sign In/Up </h4>
-        <SignIn url={this.props.url + "users/sign_in.json"} onSignIn={this.setUser}/>
+        <section className='column'>Hi there! Cookbook helps to organise your favourite recipes. Explore and find some food you love. Make it and then save it for later! </section>
+        <div className= 'section'>
+        <h3> New to CookBook?</h3> 
+        <h4>Sign Up Here </h4>
         <SignUp url={this.props.url + "users.json"} onSignUp={this.setUser}/>
+        </div>
+        <div className= 'section'>
+        <h3> Already a Member? </h3>
+        <h4>Please Sign In Here</h4>
+        <SignIn url={this.props.url + "users/sign_in.json"} onSignIn={this.setUser}/>
+        </div>
       </div>
       if(this.state.currentUser){
         mainDiv = <div>

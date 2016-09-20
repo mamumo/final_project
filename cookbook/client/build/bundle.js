@@ -68,7 +68,7 @@
 	        Route,
 	        { path: '/', component: Main },
 	        React.createElement(IndexRoute, { component: Home }),
-	        React.createElement(Route, { path: '/shows', component: Listing })
+	        React.createElement(Route, { path: '/recipes', component: Listing })
 	      )
 	    );
 	  }
@@ -19788,16 +19788,11 @@
 	  return React.createElement(
 	    'div',
 	    { className: 'home' },
-	    React.createElement(
-	      'h1',
-	      { className: 'title' },
-	      ' CookBook '
-	    ),
 	    React.createElement(LoginBox, { url: 'http://localhost:5000/' }),
 	    React.createElement(
 	      Link,
 	      { className: 'recipes-link', to: '/recipes' },
-	      ' View Recipes'
+	      ' Let\'s Cook! '
 	    )
 	  );
 	};
@@ -25610,12 +25605,40 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h4',
-	        null,
-	        ' Please Sign In/Up '
+	        'section',
+	        { className: 'column' },
+	        'Hi there! Cookbook helps to organise your favourite recipes. Explore and find some food you love. Make it and then save it for later! '
 	      ),
-	      React.createElement(SignIn, { url: this.props.url + "users/sign_in.json", onSignIn: this.setUser }),
-	      React.createElement(SignUp, { url: this.props.url + "users.json", onSignUp: this.setUser })
+	      React.createElement(
+	        'div',
+	        { className: 'section' },
+	        React.createElement(
+	          'h3',
+	          null,
+	          ' New to CookBook?'
+	        ),
+	        React.createElement(
+	          'h4',
+	          null,
+	          'Sign Up Here '
+	        ),
+	        React.createElement(SignUp, { url: this.props.url + "users.json", onSignUp: this.setUser })
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'section' },
+	        React.createElement(
+	          'h3',
+	          null,
+	          ' Already a Member? '
+	        ),
+	        React.createElement(
+	          'h4',
+	          null,
+	          'Please Sign In Here'
+	        ),
+	        React.createElement(SignIn, { url: this.props.url + "users/sign_in.json", onSignIn: this.setUser })
+	      )
 	    );
 	    if (this.state.currentUser) {
 	      mainDiv = React.createElement(
@@ -26032,8 +26055,7 @@
 	  return React.createElement(
 	    'div',
 	    { className: 'recipe' },
-	    React.createElement('img', { src: 'images/' + props.image, className: 'recipe-image' }),
-	    React.createElement('iframe', { width: '560', height: '315', src: props.video, className: 'recipe-video', frameborder: '0', allowfullscreen: true }),
+	    React.createElement('iframe', { width: '400', height: '315', src: props.video, className: 'recipe-video', frameborder: '0', allowfullscreen: true }),
 	    React.createElement(
 	      'div',
 	      { className: 'recipe-details' },

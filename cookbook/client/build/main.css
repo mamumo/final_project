@@ -4,20 +4,19 @@ body{
 }
 
 header{
+  z-index:1;
   text-align:none;
   background-color: black;
   top:0px;
-  height: 40px;
+  height: 75px;
   position:fixed;
- /* left:0px;*/
-  /*right:5px;*/
-  /*bottom:0px;*/
+  margin-top:-20px;
   width: 100%;
   color:white;
-
+  margin-bottom: 10px;
 }
 
-/*.container{  
+.container{  
   width: 100%;
   height: 100vh;
   display: flex;
@@ -27,13 +26,23 @@ header{
   background-image: url(images/bull.jpg);
   background-size: cover;
 
-}*/
+}
 
-.title{
+/*.title{
   font-family: Courier
   font-size: 60px;
   -webkit-text-stroke: 2px black;
   text-decoration: none;
+}*/
+
+.column {
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
 }
 
 .home{
@@ -43,7 +52,8 @@ header{
 }
 
 .recipes-link, button{
-  margin-top: 15px;
+  font-family: Courier;
+  margin-top: 20px;
   padding: 10px 40px;
   background-color: black;
   color: #fafafa;
@@ -73,25 +83,36 @@ nav{
   font-size: 20px;
 }
 
+.section{
+  /*width: 70%;*/
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 1em;
+  padding:30px;
+}
+
 .login-form{
   margin: 0 auto;
   width: 70%;
-}
+  display: inline-block;
+  }
 
 .login-form input{
   display: block;
-  /*margin: 20px 0;
+  margin: 20px 0;
   padding: 10px;
-  width: 100%;*/
+  width: 100%;
 }
 
 button{
   /*padding: 10px 50px;*/
  /* margin 20px 0;*/
+  font-family: Courier
   color: white;
   background-color: black;
-  /*font-size: 15px;
-  border-radius: 5px;*/
+  /*font-size: 10px;*/
+  border-radius: 5px;
 }
 
 .recipe-image{
@@ -118,7 +139,7 @@ button{
   color: #eee;
   margin: 10px;
   padding: 10px;
-  width: 350px;
+  width: 400px;
 }
 
 .recipe-name{

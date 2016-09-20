@@ -2,8 +2,8 @@ const React = require('react')
 
 const Recipe = (props) => (
   <div className='recipe'>
-  <img src={`images/${props.image}`} className = 'recipe-image'/>
-  <iframe width="560" height="315" src={props.video} className='recipe-video'frameborder="0" allowfullscreen>
+  {/* <img src={`images/${props.image}`} className = 'recipe-image'/> */}
+  <iframe width="400" height="315" src={props.video} className='recipe-video'frameborder="0" allowfullscreen>
   </iframe>
   <div className='recipe-details'>
     <h3 className='recipe-name'>{props.name}</h3>
@@ -29,3 +29,4 @@ Recipe.propTypes = {
 }
 
 module.exports = Recipe
+

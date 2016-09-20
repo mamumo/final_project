@@ -4,10 +4,10 @@ const { Link } = require('react-router')
 
 const Home = () => (
   <div className = "home">
-  <h1 className='title'> CookBook </h1>
   <LoginBox url="http://localhost:5000/" />
-  <Link className = 'recipes-link' to='/recipes'> View Recipes</Link>
+  <Link className = 'recipes-link' to='/recipes'> Let's Cook! </Link>
 </div>
   )
 
 module.exports = Home
+
