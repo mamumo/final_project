@@ -4,6 +4,7 @@ const { Link } = require('react-router')
 
 const Home = () => (
   <div className = "home">
+  <div className = "title">CookBook</div>
   <LoginBox url="http://localhost:5000/" />
   <Link className = 'recipes-link' to='/recipes'> Let's Cook! </Link>
 </div>

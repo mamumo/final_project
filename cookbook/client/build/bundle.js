@@ -19788,6 +19788,11 @@
 	  return React.createElement(
 	    'div',
 	    { className: 'home' },
+	    React.createElement(
+	      'div',
+	      { className: 'title' },
+	      'CookBook'
+	    ),
 	    React.createElement(LoginBox, { url: 'http://localhost:5000/' }),
 	    React.createElement(
 	      Link,
@@ -25606,8 +25611,8 @@
 	      null,
 	      React.createElement(
 	        'section',
-	        { className: 'column' },
-	        'Hi there! Cookbook helps to organise your favourite recipes. Explore and find some food you love. Make it and then save it for later! '
+	        { className: 'description' },
+	        'Search. Cook. Save.'
 	      ),
 	      React.createElement(
 	        'div',

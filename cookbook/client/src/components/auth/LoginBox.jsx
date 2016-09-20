@@ -40,7 +40,7 @@ const LoginBox = React.createClass({
 
   render () {
       let mainDiv = <div>
-        <section className='column'>Hi there! Cookbook helps to organise your favourite recipes. Explore and find some food you love. Make it and then save it for later! </section>
+        <section className='description'>Search. Cook. Save.</section>
         <div className= 'section'>
         <h3> New to CookBook?</h3> 
         <h4>Sign Up Here </h4>
