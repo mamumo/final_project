@@ -1,9 +1,11 @@
 body{
   font-family: Courier;
+  background-image: url(images/bull.jpg);
+  background-size: cover;
   margin: 0;
 }
 
-header{
+/*header{
   z-index:1;
   text-align:none;
   background-color: black;
@@ -14,7 +16,7 @@ header{
   width: 100%;
   color:white;
   margin-bottom: 10px;
-}
+}*/
 
 .container{  
   width: 100%;
@@ -23,17 +25,17 @@ header{
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url(images/bull.jpg);
-  background-size: cover;
+ 
 
 }
 
-/*.title{
+.title{
   font-family: Courier
+  color:white;
   font-size: 60px;
   -webkit-text-stroke: 2px black;
   text-decoration: none;
-}*/
+}
 
 .column {
   padding: 1em;
@@ -71,15 +73,15 @@ header{
 nav{
   display: flex;
   align-items: center;
-  background: #eee;
+  background: black;
   padding: 10px;
   margin: 0 0 20px 0;
 }
 
 .search-box{
+  float:right;
   padding: 5px;
   border-radius: 4px;
-  margin-left: 10vh;
   font-size: 20px;
 }
 
@@ -126,7 +128,7 @@ button{
 }*/
 
 .recipes-container{
-  display: flex;
+  display:flex;
 }
 
 .recipes-container > *{

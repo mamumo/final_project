@@ -3,7 +3,7 @@ const React = require('react')
 const Recipe = (props) => (
   <div className='recipe'>
   {/* <img src={`images/${props.image}`} className = 'recipe-image'/> */}
-  <iframe width="400" height="315" src={props.video} className='recipe-video'frameborder="0" allowfullscreen>
+  <iframe width="350" height="315" src={props.video} className='recipe-video'frameBorder="0" allowFullScreen>
   </iframe>
   <div className='recipe-details'>
     <h3 className='recipe-name'>{props.name}</h3>

@@ -26055,7 +26055,7 @@
 	  return React.createElement(
 	    'div',
 	    { className: 'recipe' },
-	    React.createElement('iframe', { width: '400', height: '315', src: props.video, className: 'recipe-video', frameborder: '0', allowfullscreen: true }),
+	    React.createElement('iframe', { width: '350', height: '315', src: props.video, className: 'recipe-video', frameBorder: '0', allowFullScreen: true }),
 	    React.createElement(
 	      'div',
 	      { className: 'recipe-details' },
